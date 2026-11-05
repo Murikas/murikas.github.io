@@ -70,6 +70,10 @@ p { margin: 0 0 11px; }
   display: block;
   width: 100%;
   height: auto;
+  padding: 5px;
+  border: 1px solid #ded6d2;
+  background: #fff;
+  box-shadow: 0 2px 9px rgb(41 39 39 / 8%);
 }
 .accent-link { color: var(--accent); font-weight: 700; }
 .market { color: var(--accent); margin: 16px 0 10px; }
@@ -84,15 +88,17 @@ p { margin: 0 0 11px; }
   margin-bottom: 16px;
 }
 .page-heading > a { font-size: 15px; }
-.research-section, .teaching-section { border-top: 1px solid var(--line); padding: 12px 0 11px; }
-.research-section h2 { font-size: 16px; margin-bottom: 7px; color: var(--muted); }
-.paper + .paper { margin-top: 10px; }
+.research-section, .teaching-section { border-top: 1px solid var(--line); }
+.research-section { padding: 18px 0 21px; }
+.research-section h2 { font-size: 17px; margin-bottom: 11px; color: var(--muted); }
+.paper + .paper { margin-top: 16px; }
+.paper h3, .project summary { font-size: 19px; }
 .paper h3 a { color: var(--ink); text-decoration-color: #d4c5c7; }
 .paper h3 a:hover { color: var(--accent); }
-.paper p { font-size: 14px; line-height: 1.4; margin: 2px 0 0; }
+.paper p { font-size: 15px; line-height: 1.5; margin: 4px 0 0; }
 .paper .coauthors { color: var(--muted); }
 .paper .status { color: var(--accent); }
-.paper-actions { margin-top: 4px; font-size: 14px; }
+.paper-actions { margin-top: 7px; font-size: 14px; }
 .paper-actions > a { display: inline-block; margin-right: 13px; }
 .paper-actions > details { display: inline; }
 summary { color: var(--accent); cursor: pointer; }
@@ -100,12 +106,18 @@ summary { color: var(--accent); cursor: pointer; }
 .paper-actions details[open] { display: block; margin-top: 5px; }
 .paper-actions details p, .project > p { max-width: 75ch; }
 .paper-actions details p { margin-top: 7px; border-left: 1px solid var(--line); padding-left: 12px; }
-.project summary { color: var(--ink); font-size: 18px; line-height: 1.35; }
+.project summary { color: var(--ink); line-height: 1.35; }
 .project summary:hover { color: var(--accent); }
 
 .teaching-layout { display: grid; grid-template-columns: minmax(0, 1fr) 225px; gap: 42px; align-items: start; }
-.teaching-section h2 { font-size: 19px; margin-bottom: 7px; }
-.teaching-section h2 span { margin-left: 9px; color: var(--muted); font-size: 14px; }
+.teaching-documents { font-size: 15px; }
+.teaching-section { padding: 15px 0 17px; }
+.teaching-section h2 { font-size: 19px; margin-bottom: 10px; }
+.teaching-section h2 span { color: var(--muted); font-size: 16px; }
+.instructor-courses { list-style: none; margin: 0; padding: 0; }
+.course-meta { margin-left: 6px; color: var(--muted); font-size: 13px; }
+.course-project { margin-top: 4px; max-width: 58ch; font-size: 14px; }
+.course .course-project p { display: block; margin: 0 0 3px; font-size: inherit; color: var(--muted); }
 .course + .course { margin-top: 6px; }
 .course h3 { display: inline; font-size: 16px; }
 .course p { display: inline; margin-left: 7px; color: var(--muted); font-size: 13px; }
@@ -116,11 +128,8 @@ summary { color: var(--accent); cursor: pointer; }
 .ta-columns ul { list-style: none; padding: 0; margin: 4px 0 0; }
 .ta-columns li { margin-bottom: 2px; font-size: 14px; line-height: 1.45; }
 .ta-columns li span { color: var(--muted); font-size: 12px; white-space: nowrap; }
-.teaching-aside img { display: block; width: 100%; height: 208px; object-fit: cover; object-position: 50% 32%; }
-.teaching-project { margin-top: 12px; }
-.teaching-project h2 { font-size: 18px; }
-.teaching-project p { font-size: 14px; line-height: 1.45; margin: 5px 0; }
-.teaching-project a { font-size: 14px; }
+
+.teaching-photo { display: block; width: 100%; height: auto; }
 
 .footer {
   display: flex;
@@ -140,12 +149,6 @@ summary { color: var(--accent); cursor: pointer; }
 .skip { position: absolute; top: -100px; left: 15px; padding: 8px; background: white; z-index: 2; }
 .skip:focus { top: 8px; }
 
-@media (min-width: 621px) and (max-height: 780px) {
-  .research-main .research-section { padding: 7px 0 7px; }
-  .research-main .paper + .paper { margin-top: 7px; }
-  .research-main .page-heading { margin-bottom: 13px; }
-}
-
 @media (max-width: 820px) {
   .site { padding: 0 27px; }
   .header { flex-wrap: wrap; gap: 8px 20px; }
@@ -161,8 +164,7 @@ summary { color: var(--accent); cursor: pointer; }
   .home-layout { display: flow-root; }
   .portrait { float: right; width: clamp(86px, 28vw, 140px); margin: 0 0 10px 16px; }
   .teaching-layout { display: block; }
-  .teaching-aside { margin-top: 14px; }
-  .teaching-aside img { max-width: 225px; }
+  .teaching-photo { width: 165px; margin-top: 12px; }
   .ta-columns { gap: 12px; }
   .footer { flex-wrap: wrap; }
 }
